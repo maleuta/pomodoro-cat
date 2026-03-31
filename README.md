@@ -9,7 +9,7 @@ A desktop Pomodoro Timer application with gamification elements. It helps you ma
 * **Cozy Animations:** The virtual cat changes its state (Idle, Working, Sleeping) depending on the active timer mode.
 
 ## 🛠️ Tech Stack
-* **Frontend:** React (Vite) + CSS
+* **Frontend:** React + CSS
 * **Desktop Environment:** Electron
 * **Backend:** Python + FastAPI
 * **Database:** PostgreSQL
