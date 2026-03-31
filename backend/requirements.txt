@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+databases
+asyncpg
+psycopg2-binary
