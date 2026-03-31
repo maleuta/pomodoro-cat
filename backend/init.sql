@@ -1,11 +1,11 @@
--- tabela użytkownika
+-- table users
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     coins INTEGER DEFAULT 0
 );
 
--- tabela historii sesji
+-- tabela session history
 CREATE TABLE sessions (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
@@ -15,12 +15,11 @@ CREATE TABLE sessions (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- tabela kupionych akcesoriów w sklepie
+-- table of purchased accessories
 CREATE TABLE inventory (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
     item_name VARCHAR(100) NOT NULL
 );
 
--- dodajemy Ciebie jako pierwszego użytkownika z 50 monetami na start!
 INSERT INTO users (username, coins) VALUES ('Kociara99', 50);

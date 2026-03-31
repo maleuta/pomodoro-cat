@@ -4,9 +4,8 @@ from pydantic import BaseModel
 import databases
 import sqlalchemy
 
-
-DATABASE_URL = "postgresql://postgres:45179MrNo@localhost/pomodoro_kotki"
-
+# put your password to the database
+DATABASE_URL = "postgresql://postgres:your_password@localhost/kocia_baza"
 database = databases.Database(DATABASE_URL)
 metadata = sqlalchemy.MetaData()
 
