@@ -28,6 +28,7 @@ Before you begin, ensure you have the following installed on your machine:
 ```bash
 git clone [https://github.com/YOUR_USERNAME/pomodoro-cat.git](https://github.com/YOUR_USERNAME/pomodoro-cat.git)
 cd pomodoro-cat
+```
 
 ### 2. Database Setup
 Create a PostgreSQL database named kocia_baza.
@@ -37,19 +38,22 @@ Execute the SQL script provided in the backend/init.sql file to create the neces
 ### 3. Backend Setup (FastAPI)
 Navigate to the backend directory, install the dependencies, and start the server:
 
-Bash
+```Bash
 cd backend
 pip install -r requirements.txt
+```
 
 ⚠️ Important: Before running the server, open main.py and replace the DATABASE_URL placeholder with your actual PostgreSQL credentials.
 
+```
 uvicorn main:app --reload
-
+```
 
 ### 4. Frontend & Electron Setup (React)
 Open a new terminal window, navigate to the frontend directory, install the required packages, and launch the desktop application:
 
-Bash
+```Bash
 cd frontend
 npm install
 npm run start-app
+```
