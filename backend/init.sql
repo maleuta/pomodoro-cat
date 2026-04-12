@@ -1,11 +1,11 @@
--- table users
+-- stores our users and their precious coins
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     coins INTEGER DEFAULT 0
 );
 
--- tabela session history
+-- keeps track of all the hard work (and naps)
 CREATE TABLE sessions (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
@@ -15,11 +15,5 @@ CREATE TABLE sessions (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- table of purchased accessories
-CREATE TABLE inventory (
-    id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id),
-    item_name VARCHAR(100) NOT NULL
-);
-
+-- giving you some starter cash so you're not broke on day one
 INSERT INTO users (username, coins) VALUES ('Kociara99', 50);
