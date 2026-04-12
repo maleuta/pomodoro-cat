@@ -1,4 +1,6 @@
+/* setting up the default light theme and base variables */
 :root {
+  /* our color palette - super soft and clean */
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -11,10 +13,12 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+  /* choosing the right fonts for regular text and code */
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  /* typography settings so everything looks crisp and modern */
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -25,11 +29,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* making sure the base text scales down nicely on smaller screens */
   @media (max-width: 1024px) {
     font-size: 16px;
   }
 }
 
+/* automatically switching to dark mode if the user's system prefers it */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -45,15 +51,18 @@
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
+  /* flipping icon colors so they don't disappear on a dark background */
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
 }
 
+/* stripping away the browser's annoying default margins */
 body {
   margin: 0;
 }
 
+/* the main wrapper holding the whole app together in the middle of the screen */
 #root {
   width: 1126px;
   max-width: 100%;
@@ -66,6 +75,7 @@ body {
   box-sizing: border-box;
 }
 
+/* giving our main titles a unified, bold look */
 h1,
 h2 {
   font-family: var(--heading);
@@ -73,28 +83,36 @@ h2 {
   color: var(--text-h);
 }
 
+/* styling the big hero title */
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+  
+  /* shrinking the massive title on mobile devices so it fits */
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
+/* smaller subheadings */
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+  
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
 
+/* setting up the terminal/hacker vibe for code blocks and counters */
 code,
 .counter {
   font-family: var(--mono);
@@ -103,6 +121,7 @@ code,
   color: var(--text-h);
 }
 
+/* giving actual code snippets a nice little background box */
 code {
   font-size: 15px;
   line-height: 135%;
