@@ -2,13 +2,13 @@
 
 A desktop Pomodoro Timer application with gamification elements. It helps you maintain focus during study or work sessions by featuring a virtual cat assistant and a reward system (coins) for completing your tasks.
 
-## ✨ Features
+## Features
 * **Compact Interface (Widget):** The application runs in a standalone, borderless window that stays "Always on Top" of your screen.
 * **Customizable Modes:** Built-in time presets (e.g., 25/5, 50/10) and adjustable session repetitions (sets).
 * **Gamification:** Earn virtual coins for every minute of focused work.
 * **Cozy Animations:** The virtual cat changes its state (Idle, Working, Sleeping) depending on the active timer mode.
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Frontend:** React + CSS
 * **Desktop Environment:** Electron
 * **Backend:** Python + FastAPI
@@ -16,7 +16,7 @@ A desktop Pomodoro Timer application with gamification elements. It helps you ma
 
 ---
 
-## 🚀 How to run locally?
+## How to run locally?
 
 ### Prerequisites
 Before you begin, ensure you have the following installed on your machine:
@@ -38,6 +38,7 @@ Execute the SQL script provided in the backend/init.sql file to create the neces
 ### 3. Backend Setup (FastAPI)
 Navigate to the backend directory, install the dependencies, and start the server:
 
+1 terminal:
 ```Bash
 cd backend
 pip install -r requirements.txt
@@ -52,6 +53,13 @@ uvicorn main:app --reload
 ### 4. Frontend & Electron Setup (React)
 Open a new terminal window, navigate to the frontend directory, install the required packages, and launch the desktop application:
 
+2 terminal:
+```Bash
+cd frontend
+npm run dev
+```
+
+3 terminal:
 ```Bash
 cd frontend
 npm install
