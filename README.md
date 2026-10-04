@@ -1,4 +1,4 @@
-# 🐾 Pomodoro Cat
+# Pomodoro Cat
 
 A desktop Pomodoro Timer application with gamification elements. It helps you maintain focus during study or work sessions by featuring a virtual cat assistant and a reward system (coins) for completing your tasks.
 
@@ -44,7 +44,7 @@ cd backend
 pip install -r requirements.txt
 ```
 
-⚠️ Important: Before running the server, open main.py and replace the DATABASE_URL placeholder with your actual PostgreSQL credentials.
+Important: Before running the server, open main.py and replace the DATABASE_URL placeholder with your actual PostgreSQL credentials.
 
 ```
 uvicorn main:app --reload
